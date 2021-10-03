@@ -1,0 +1,23 @@
+books {
+    color: white;
+    background-color : gray;
+    width: 100%;
+}
+heading {
+    color: rgb(167, 193, 167);
+    font-size : 40px;
+    background-color : rgb(196, 96, 3);
+}
+heading, id, name, artist, genre, releaseYear {
+    display : block;
+}
+
+name {
+    font-size : 25px;
+    font-weight : bold;
+}
+
+id{
+    font-size: 30px;
+    color: #e46c2c;
+}

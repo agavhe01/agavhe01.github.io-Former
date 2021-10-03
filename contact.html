@@ -1,0 +1,213 @@
+<!--        ANESU GAVHERA              -->
+<!--      CATERING COMPANY             -->
+<!--         8/02/2021                 -->
+<!--        index.html                 -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags always come first -->
+    <meta charset = "utf-8" />
+    <meta name = "viewport" content = "width=device-width, initial-scale=1" />
+
+    <link rel = "stylesheet" href = "css/styles.css" />
+  
+    <title>Gemma Events, an equipment hiring company</title>
+    
+</head>
+
+<!-- NAVBAR OVERLAY SCRIPT -->
+<script>
+
+  /* Open when someone clicks on the  element */
+  function openNav() {
+    document.getElementById("myNav").style.width = "100%";
+  }
+
+  /* Close when someone clicks on the "x" symbol inside the overlay */
+    function closeNav() {
+      document.getElementById("myNav").style.width = "0%";
+    }
+</script>
+
+<body>
+
+<!-- Header jumbtron with logo -->
+  <header class = "jumbotron jumbotron-fluid">
+    <div class = "container">
+      <div class = "row">
+          <div class="col align-self-center">
+              <img src="img/logo white on black.PNG" class="display-centred img-fluid" />
+           </div>
+      </div> <!-- End row line 80-->
+           <div class = "row">
+              <div class = "col mt-3">
+                  <h1 class = "centreAlign">GEMMA'S EVENTS</h1>
+                  <h2 class = "centreAlign d-none d-sm-block">for all your equipment hiring and catering needs</h2>
+                </div>
+              </div>
+    
+  </div>
+
+
+  </header>
+  
+  <!-- Navbar with overlay -->
+  <nav class = "navbar navbar-dark sticky-top">
+    <!-- The overlay -->
+    <div id = "myNav" class = "overlay">
+
+      <!-- Button to close the overlay navigation -->
+      <a href = "javascript:void(0)" class = "closebtn" onclick = "closeNav()">&times;</a>
+
+      <!-- Overlay content -->
+      <div class = "overlay-content">
+        <a href = "index.html">Home</a>
+        <a href = "#">Contact</a>
+        <a href = "services.html">Services</a>
+        <a href = "songList.xml">SongsList XML</a>
+      </div>
+
+    </div>
+    
+    <div class = "container">
+      <div class = "row" >
+        <div class = "col ml-4">
+          <button class = "navbar-toggler" type = "button" name = "learn" value = "myimage">
+            <img src="img/menuIcon.PNG" height="50px" onclick="openNav()"/>
+         </button>
+
+      </div>
+      </div>
+    </div>
+
+
+  </nav>
+
+
+
+  
+<div class = "container mx-50 mt-4">
+    <div class = "parallax">
+
+        <div class="row row-content align-items-center">
+            <div class="col-sm-4">
+                <h5>Our Address</h5>
+                <address>
+                    1 Nucamp Way<br />
+                    Seattle, WA 98001<br />
+                    U.S.A.
+                </address>
+            </div>
+            <div class="col">
+				<a role = "button" class = "btn btn-link" href = "tel:+12065551234"<i class="fa fa-phone"></i> 1-206-555-1234</a><br>
+            	<i class="fa fa-envelope-o"></i> campsites@nucamp.co
+            </div>
+        </div>
+
+        <div class="row-content">
+            <div class="col-12">
+                <h2>Send us your Feedback</h2>
+                <hr />
+            </div>
+            <div class="col-md-10">
+                <form>
+                    <div class="form-group row">
+                        <label for="firstName" class="col-md-2 col-form-label">First Name</label>
+                        <div class="col-md-10">
+                            <input type="text" class="form-control" id="firstName" name="firstName" placeholder="First Name" />
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="lastName" class="col-md-2 col-form-label">Last Name</label>
+                        <div class="col-md-10">
+                            <input type="text" class="form-control" id="lastName" name="lastName" placeholder="Last Name" />
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="areaCode" class="col-md-2 col-form-label">Contact Tel.</label>
+                        <div class="col-5 col-md-3">
+                            <input type="tel" class="form-control" id="areaCode" name="areaCode" placeholder="Area code" />
+                        </div>
+                        <div class="col-7">
+                            <input type="tel" class="form-control" name="telNum" placeholder="Tel. number" />
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="email" class="col-md-2 col-form-label">Email</label>
+                        <div class="col-md-10">
+                            <input type="email" class="form-control" id="email" name="email" placeholder="Email" />
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col offset-md-2">
+                            May we contact you?
+                            <div class="form-check form-check-inline">
+                                <input type="radio" class="form-check-input" id="contactYes" name="contactRadios" value="yes" />
+                                <label for="contactYes" class="form-check-label">Yes</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input type="radio" class="form-check-input" id="contactNo" name="contactRadios" value="no" />
+                                <label for="contactNo" class="form-check-label">No</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="feedback" class="col-md-2 col-form-label">Your Feedback</label>
+                        <div class="col-md-10">
+                            <textarea class="form-control" id="feedback" name="feedback" rows="8"></textarea>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="offset-md-2 col-md-10">
+                            <button type="submit" class="btn btn-primary">Send Feedback</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+       </div>
+
+    </div>
+
+</div> <!-- END CONTAINER HERE -->
+
+  <footer class = "site-footer">
+    <div class = "container">
+      <div class = "row">
+
+        <div class = "column">
+          <h5>Additional Links</h5>
+          <ul class = "a">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="services.html">Services</a></li>
+        </ul>
+
+        </div>
+
+        <div class = "column">
+          <h5>Social Media</h5>
+          <ul class = "a">
+            <li><a href="http://instagram.com/">Instagram</a></li>
+            <li><a href="http://facebook.com/">Facebook</a></li>
+            <li><a href="http://youtube.com/">Youtube</a></li>
+        </ul>
+        </div>
+
+        <div class = "column align-self-left" >
+          <h5>Contact Details</h5>
+          <a role="button" class="btn btn-link icon-orange  text-nowrap" href="tel:+263775884917"><i class="fa fa-phone icon-orange"></i> +263 775 884 917</a><br/>
+          <a role="button" class="btn btn-link icon-orange  " href=" http://maps.google.com/?q=2 Cavendish Drive, Avonlea, Harare"><i class="fa fa-home icon-orange"></i>2 Cavendish Drive, Avonlea, Harare</a>             
+      </div>
+      
+      </div>
+
+    </div>
+
+  </footer>
+
+</body>
+
+</html>

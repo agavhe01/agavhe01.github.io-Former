@@ -1,0 +1,285 @@
+<!--        ANESU GAVHERA              -->
+<!--      CATERING COMPANY             -->
+<!--         8/02/2021                 -->
+<!--        index.html                 -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags always come first -->
+    <meta charset = "utf-8" />
+    <meta name = "viewport" content = "width=device-width, initial-scale=1" />
+
+    <link rel = "stylesheet" href = "css/styles.css" />
+  
+    <title>Gemma Events, an equipment hiring company</title>
+    
+</head>
+
+<!-- NAVBAR OVERLAY SCRIPT -->
+<script>
+
+  /* Open when someone clicks on the  element */
+  function openNav() {
+    document.getElementById("myNav").style.width = "100%";
+  }
+
+  /* Close when someone clicks on the "x" symbol inside the overlay */
+    function closeNav() {
+      document.getElementById("myNav").style.width = "0%";
+    }
+</script>
+
+ <!-- TABULAR GALLERY SCRIPT-->
+ <script>
+    function myFunction(imgs, num) {
+      var textString = "expandedImg";
+      textString += num;
+      var textString2 = "imgtext";
+      textString2 += num;
+      var expandImg = document.getElementById(textString);
+      var imgText = document.getElementById(textString2);
+      expandImg.src = imgs.src;
+      imgText.innerHTML = imgs.alt;
+      expandImg.parentElement.style.display = "block";
+    }
+</script>
+
+<body>
+
+
+
+<!-- Header jumbtron with logo -->
+  <header class = "jumbotron jumbotron-fluid">
+    <div class = "container">
+      <div class = "row">
+          <div class="col align-self-center">
+              <img src="img/logo white on black.PNG" class="display-centred img-fluid" />
+           </div>
+      </div> <!-- End row line 80-->
+           <div class = "row">
+              <div class = "col mt-3">
+                  <h1 class = "centreAlign">GEMMA'S EVENTS</h1>
+                  <h2 class = "centreAlign d-none d-sm-block">for all your equipment hiring and catering needs</h2>
+                </div>
+              </div>
+    
+  </div>
+
+
+  </header>
+  
+  <!-- Navbar with overlay -->
+  <nav class = "navbar navbar-dark sticky-top">
+    <!-- The overlay -->
+    <div id = "myNav" class = "overlay">
+
+      <!-- Button to close the overlay navigation -->
+      <a href = "javascript:void(0)" class = "closebtn" onclick = "closeNav()">&times;</a>
+
+      <!-- Overlay content -->
+      <div class = "overlay-content">
+        <a href = "index.html">Home</a>
+        <a href = "contact.html">Contact</a>
+        <a href = "#">Services</a>
+        <a href = "songList.xml">SongsList XML</a>
+      </div>
+
+    </div>
+    
+    <div class = "container">
+      <div class = "row" >
+        <div class = "col ml-4">
+          <button class = "navbar-toggler" type = "button" name = "learn" value = "myimage">
+            <img src="img/menuIcon.PNG" height="50px" onclick="openNav()"/>
+         </button>
+
+      </div>
+      </div>
+    </div>
+
+
+  </nav>
+
+<div class = "container mt-4">
+
+    <div class="parallax">
+
+        <!-- Label 1: Corporate Events-->
+        <div style="height:200px;background-color:#d66b30;font-size:36px">
+            <!-- Label 1-->
+            <div class = "row">
+                <div class="col align-self-center">
+                    <img src="img/label_corporateEvents.PNG" height = "200px" width = "200px" class="display-centred" data-toggle="tooltip" data-placement="bottom" data-html="true" title="click on any image below to expand"/>
+                </div>
+            </div> <!-- End row -->
+        </div> <!-- end style-->
+        
+        <!------------ The Image Gallery  ------------>
+        </br> </br> 
+
+        <style>
+            *{
+              box-sizing: border-box;
+            }
+            
+            
+            
+            /* The grid: Four equal columns that floats next to each other */
+            .columnImage {
+              float: left;
+              width: 22%;
+              padding: 0px;
+            }
+            
+            /* Style the images inside the grid */
+            .column img {
+              opacity: 0.8; 
+              cursor: pointer; 
+            }
+            
+            .column img:hover {
+              opacity: 1;
+            }
+            
+            /* Clear floats after the columns */
+            .row:after {
+              content: "";
+              display: table;
+              clear: both;
+            }
+            
+            /* The expanding image container */
+            .containerImage {
+              position: relative;
+              display: none;
+            }
+            
+            /* Expanding image text */
+            #imgtext {
+              position: absolute;
+              bottom: 15px;
+              left: 15px;
+              color: white;
+              font-size: 20px;
+            }
+            
+            /* Closable button inside the expanded image */
+            .closebtn {
+              position: absolute;
+              top: 10px;
+              right: 15px;
+              color: white;
+              font-size: 35px;
+              cursor: pointer;
+            }
+        </style>
+    
+        <div class="row">
+            <div class="columnImage ml-3 ml-xl-12 px-12">
+                <img class = "thumbnailFormat" src="img/cooperate1.jpg" alt="Blue Label Corporate" style="width:100%" onclick="myFunction(this,1);">
+            </div>
+            <div class="columnImage ml-2 mx-xl-2">
+                <img class = "thumbnailFormat" src="img/cooporate2.jfif" alt="Delta Beverages Corporate" style="width:100%" onclick="myFunction(this,1);">
+            </div>
+            <div class="columnImage ml-1 mx-xl-6">
+                <img class = "thumbnailFormat" src="img/cooporate4.jfif" alt="Meikles Hotel Corporate" style="width:100%" onclick="myFunction(this,1);">
+            </div>
+            <div class="columnImage ml-2 mx-xl-2">
+                <img class = "thumbnailFormat" src="img/cooperate3.jpg" alt="Riverside Corporate" style="width:100%" onclick="myFunction(this,1);">
+            </div>
+            
+        </div>
+        
+        <div class="containerImage">
+            </br>
+            <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+            <img id="expandedImg1" style="width:100%">
+            <div id="imgtext1"></div>
+        </div>
+
+        </br> </br>
+        <!------------- end Image Gallery ------------->
+
+        <!-- Label 2: Entertainment Services -->
+        <div style="height:200px;background-color:#d66b30;font-size:36px">
+            <!-- Label 1-->
+            <div class = "row">
+                <div class="col align-self-center">
+                    <img src="img/label_entertainmentServices.PNG" height = "200px" width = "200px" class="display-centred" data-toggle="tooltip" data-placement="bottom" data-html="true" title="click on any image below to expand" />
+                </div>
+            </div> <!-- End row -->
+        </div> <!-- end style-->
+
+        <!------------- 2nd image gallery -------------->
+        </br> </br>
+        <div class="row">
+            <div class="columnImage ml-3">
+            <img class = "thumbnailFormat" src="img/entertainment1.jfif" alt="Card Deck Themed" style="width:100%" onclick="myFunction(this,2);">
+            </div>
+            <div class="columnImage ml-2">
+            <img class = "thumbnailFormat" src="img/entertainment2.jpg" alt="Meikles Hotel Aerial View" style="width:100%" onclick="myFunction(this,2);">
+            </div>
+            <div class="columnImage ml-2">
+            <img class = "thumbnailFormat" src="img/entertainment3.jfif" alt="Checkered Dancefloor" style="width:100%" onclick="myFunction(this,2);">
+            </div>
+            <div class="columnImage ml-1">
+            <img class = "thumbnailFormat" src="img/entertainment4.jfif" alt="Blue Lighting Themed Event" style="width:100%" onclick="myFunction(this,2);">
+            </div>
+        </div>
+        
+        <div class="containerImage">
+            </br>
+            <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+            <img id="expandedImg2" style="width:100%">
+            <div id="imgtext2"></div>
+        </div>
+
+        </br> </br>
+        <!------------- end 2nd Image Gallery ---------->
+
+        </div>
+
+
+</div> <!-- END CONTAINER HERE -->
+
+  <footer class = "site-footer">
+    <div class = "container">
+      <div class = "row">
+
+        <div class = "column">
+          <h5>Additional Links</h5>
+          <ul class = "a">
+            <li><a href="aboutus.html">Home</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="#">Services</a></li>
+        </ul>
+
+        </div>
+
+        <div class = "column">
+          <h5>Social Media</h5>
+          <ul class = "a">
+            <li><a href="http://instagram.com/">Instagram</a></li>
+            <li><a href="http://facebook.com/">Facebook</a></li>
+            <li><a href="http://youtube.com/">Youtube</a></li>
+        </ul>
+        </div>
+
+        <div class = "column align-self-left" >
+          <h5>Contact Details</h5>
+          <a role="button" class="btn btn-link icon-orange  text-nowrap" href="tel:+263775884917"><i class="fa fa-phone icon-orange"></i> +263 775 884 917</a><br/>
+          <a role="button" class="btn btn-link icon-orange  " href=" http://maps.google.com/?q=2 Cavendish Drive, Avonlea, Harare"><i class="fa fa-home icon-orange"></i>2 Cavendish Drive, Avonlea, Harare</a>             
+      </div>
+      
+      </div>
+
+    </div>
+
+  </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="css/rules.css"?>
+<!DOCTYPE songsList>
+
+<SongsList>
+    <heading>Welcome to Anesu's SongsList</heading>
+
+    <song>
+        <id>1</id>
+        <name>Fingers Blue</name>
+        <artist>Travis Scott</artist>
+        <genre>Rap</genre>
+        <releaseYear>2017</releaseYear>
+    </song>
+
+     <song>
+        <id>2</id>
+        <name>Send My Love</name>
+        <artist>Adele</artist>
+        <genre>Pop</genre>
+        <releaseYear>2015</releaseYear>
+    </song>
+
+     <song>
+        <id>3</id>
+        <name>Right Now</name>
+        <artist>Akon</artist>
+        <genre>RnB</genre>
+        <releaseYear>2008</releaseYear>
+    </song>
+
+     <song>
+        <id>4</id>
+        <name>Beautiful</name>
+        <artist>Akon</artist>
+        <genre>RnB</genre>
+        <releaseYear>2008</releaseYear>
+    </song>
+
+     <song>
+        <id>5</id>
+        <name>Sunny Day</name>
+        <artist>Akon</artist>
+        <genre>RnB</genre>
+        <releaseYear>2008</releaseYear>
+    </song>
+
+     <song>
+        <id>6</id>
+        <name>Love Me Harder</name>
+        <artist>Ariana Grande</artist>
+        <genre>Pop</genre>
+        <releaseYear>2014</releaseYear>
+    </song>
+
+     <song>
+        <id>7</id>
+        <name>Problem</name>
+        <artist>Ariana Grande</artist>
+        <genre>Pop</genre>
+        <releaseYear>2014</releaseYear>
+    </song>
+
+     <song>
+        <id>8</id>
+        <name>Something Different</name>
+        <artist>Adekunle Gold</artist>
+        <genre>Afro</genre>
+        <releaseYear>2020</releaseYear>
+    </song>
+
+     <song>
+        <id>9</id>
+        <name>Pretty Girl</name>
+        <artist>Adekunle Gold</artist>
+        <genre>Afro</genre>
+        <releaseYear>2020</releaseYear>
+    </song>
+
+     <song>
+        <id>10</id>
+        <name>Okay</name>
+        <artist>Adekunle Gold</artist>
+        <genre>Afro</genre>
+        <releaseYear>2020</releaseYear>
+    </song>
+
+     <song>
+        <id>11</id>
+        <name>Deadcrush</name>
+        <artist>Alt-J</artist>
+        <genre>Alternative</genre>
+        <releaseYear>2017</releaseYear>
+    </song>
+
+</SongsList>

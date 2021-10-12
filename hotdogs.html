@@ -1,0 +1,210 @@
+<!--        ANESU GAVHERA              -->
+<!--      CATERING COMPANY             -->
+<!--         8/02/2021                 -->
+<!--        index.html                 -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags always come first -->
+    <meta charset = "utf-8" />
+    <meta name = "viewport" content = "width=device-width, initial-scale=1" />
+
+    <link rel = "stylesheet" href = "css/styles.css" />
+  
+    <title>Gemma Events, an equipment hiring company</title>
+    
+</head>
+
+<!-- NAVBAR OVERLAY SCRIPT -->
+<script>
+
+  /* Open when someone clicks on the  element */
+  function openNav() {
+    document.getElementById("myNav").style.width = "100%";
+  }
+
+  /* Close when someone clicks on the "x" symbol inside the overlay */
+    function closeNav() {
+      document.getElementById("myNav").style.width = "0%";
+    }
+</script>
+
+<script
+      src="https://code.jquery.com/jquery-3.6.0.js"
+      integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+      crossorigin="anonymous">
+</script>
+
+<body>
+
+<!-- Header jumbtron with logo -->
+  <header class = "jumbotron jumbotron-fluid">
+    <div class = "container">
+      <div class = "row">
+          <div class="col align-self-center">
+              <img src="img/logo white on black.PNG" class="display-centred img-fluid" />
+           </div>
+      </div> <!-- End row line 80-->
+           <div class = "row">
+              <div class = "col mt-3">
+                  <h1 class = "centreAlign">GEMMA'S EVENTS</h1>
+                  <h2 class = "centreAlign d-none d-sm-block">for all your equipment hiring and catering needs</h2>
+                </div>
+              </div>
+    
+  </div>
+
+
+  </header>
+  
+  <!-- Navbar with overlay -->
+  <nav class = "navbar navbar-dark sticky-top">
+    <!-- The overlay -->
+    <div id = "myNav" class = "overlay">
+
+      <!-- Button to close the overlay navigation -->
+      <a href = "javascript:void(0)" class = "closebtn" onclick = "closeNav()">&times;</a>
+
+      <!-- Overlay content -->
+      <div class = "overlay-content">
+        <a href = "index.html">Home</a>
+        <a href = "#">Contact</a>
+        <a href = "services.html">Services</a>
+        <a href = "songList.xml">SongsList XML</a>
+        <a href = "hotdogs.html">Hot Dog</a>
+      </div>
+
+    </div>
+    
+    <div class = "container">
+      <div class = "row" >
+        <div class = "col ml-4">
+          <button class = "navbar-toggler" type = "button" name = "learn" value = "myimage">
+            <img src="img/menuIcon.PNG" height="50px" onclick="openNav()"/>
+         </button>
+
+      </div>
+      </div>
+    </div>
+
+
+  </nav>
+
+<div class = "container mx-50 mt-4">
+    <h1>Welcome to Joe's HotDog Stand</h1>
+    <h2>Menu:</h2>
+
+    <body>
+      <script type="text/javascript">
+          function food(name, cost) {
+              this.name = name;
+              this.cost = cost
+          }
+          
+          foods = new Array(
+              new food("Hot Dogs", 3.75),
+              new food("French Fries", 2.00),
+              new food("Soda", 1.50)
+          )
+          
+          function choose(name, minRange, maxRange) {
+              var choices = "";
+                quantities = [0, 1, 2, 3, 4, 5, 10, 15, 20];
+              choices = "<select id='" + name + "' size='1'>";
+              for (i = minRange; i <= maxRange; i++)
+                 choices += "<option>" + quantities[i] + "</option>";
+              choices += "</select>"; 
+              return choices;
+          }
+      
+          $(document).ready(function() {
+              $(document).on('submit', '#receipt', function() {
+                let tot_amount = 0;
+                let subtotal = 0;      
+                
+                var receipt_tag = document.createElement("h1");
+                var r_text = document.createTextNode("Receipt");
+                receipt_tag.appendChild(r_text);
+                var element = document.getElementById("log");
+                element.appendChild(receipt_tag);
+                
+                
+                for (let i = 0; i < foods.length; i++) {
+                    let tr = $('.itemtable tr').eq(i+1);
+                    let selected_amount = tr.find(':selected').text();
+                    tot_amount += parseInt(selected_amount);
+                    subtotal += (selected_amount * foods[i].cost)
+                    let items_tag = document.createElement("p");
+                    let item = document.createTextNode(foods[i].name + ": " + selected_amount);
+                    items_tag.appendChild(item);
+                    element.appendChild(items_tag);
+                    // document.write("<p>" + foods[i].name + ": " + selected_amount + "<\p>")
+                }
+                
+                if (subtotal >= 20)
+                    subtotal = subtotal * .9
+                
+                
+                let price_tag = document.createElement("p");
+                let price = document.createTextNode("Subtotal: $" + subtotal.toFixed(2));
+                price_tag.appendChild(price);
+                element.appendChild(price_tag);
+                
+                var total = subtotal * (1.0625);
+                var taxed = total - subtotal;
+                
+                let tax_tag = document.createElement("p");
+                let tax = document.createTextNode("Tax: $" + taxed.toFixed(2));
+                tax_tag.appendChild(tax);
+                element.appendChild(tax_tag);
+                
+                let total_tag = document.createElement("p");
+                let finish = document.createTextNode("Total: $" + total.toFixed(2));
+                total_tag.appendChild(finish);
+                element.appendChild(total_tag);
+                
+                return false;
+               });
+          });
+      </script>
+      
+      <div style="text-align: center;">
+    
+          <form id="receipt">
+              <table class="itemtable" cellpadding="3">
+                      <tr>
+                          <th>Items</th>
+                          <th>Name</th>
+                          <th>Cost</th>
+                      </tr>
+                      <script language="javascript">
+                        var s = "";
+                        for (let i = 0; i < foods.length; i++)
+                        {
+                          s += "<tr><td>";
+                          s += choose("quan" + i, 0, 8);
+                          s += "</td><td>" + foods[i].name + "</td>";
+                          s += "<td> $ " + foods[i].cost.toFixed(2) + "</td>";
+                        }
+                        document.writeln(s);
+                      </script>
+              </table>
+              <input style="float: left; margin: 10px;" type="submit">
+          </form>
+          <div id="log"></div>
+      </div>
+  </body>
+    
+    
+
+</div> <!-- END CONTAINER HERE -->
+
+
+
+
+</body>
+
+</html>

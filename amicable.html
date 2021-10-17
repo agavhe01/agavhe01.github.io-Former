@@ -1,0 +1,135 @@
+<!--        ANESU GAVHERA              -->
+<!--      CATERING COMPANY             -->
+<!--         8/02/2021                 -->
+<!--        index.html                 -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags always come first -->
+    <meta charset = "utf-8" />
+    <meta name = "viewport" content = "width=device-width, initial-scale=1" />
+
+    <link rel = "stylesheet" href = "css/styles.css" />
+  
+    <title>Gemma Events, an equipment hiring company</title>
+    
+</head>
+
+<!-- NAVBAR OVERLAY SCRIPT -->
+<script>
+
+  /* Open when someone clicks on the  element */
+  function openNav() {
+    document.getElementById("myNav").style.width = "100%";
+  }
+
+  /* Close when someone clicks on the "x" symbol inside the overlay */
+    function closeNav() {
+      document.getElementById("myNav").style.width = "0%";
+    }
+</script>
+
+<body>
+
+<!-- Header jumbtron with logo -->
+  <header class = "jumbotron jumbotron-fluid">
+    <div class = "container">
+      <div class = "row">
+          <div class="col align-self-center">
+              <img src="img/logo white on black.PNG" class="display-centred img-fluid" />
+           </div>
+      </div> <!-- End row line 80-->
+           <div class = "row">
+              <div class = "col mt-3">
+                  <h1 class = "centreAlign">GEMMA'S EVENTS</h1>
+                  <h2 class = "centreAlign d-none d-sm-block">for all your equipment hiring and catering needs</h2>
+                </div>
+              </div>
+    
+  </div>
+
+
+  </header>
+  
+  <!-- Navbar with overlay -->
+  <nav class = "navbar navbar-dark sticky-top">
+    <!-- The overlay -->
+    <div id = "myNav" class = "overlay">
+
+      <!-- Button to close the overlay navigation -->
+      <a href = "javascript:void(0)" class = "closebtn" onclick = "closeNav()">&times;</a>
+
+      <!-- Overlay content -->
+      <div class = "overlay-content">
+        <a href = "index.html">Home</a>
+        <a href = "#">Contact</a>
+        <a href = "services.html">Services</a>
+        <a href = "songList.xml">SongsList XML</a>
+        <a href = "hotdogs.html">Hot Dog</a>
+      </div>
+
+    </div>
+    
+    <div class = "container">
+      <div class = "row" >
+        <div class = "col ml-4">
+          <button class = "navbar-toggler" type = "button" name = "learn" value = "myimage">
+            <img src="img/menuIcon.PNG" height="50px" onclick="openNav()"/>
+         </button>
+
+      </div>
+      </div>
+    </div>
+
+
+  </nav>
+
+  <!-- Amicable script -->
+  <script type="text/javascript">
+
+    function sumArray(arr) {
+        return arr.reduce(function(a,b) {return a+b});
+    }
+
+    function findFactors(num) {
+        let arr = [];
+        for (i = 0; i < num; i++) {
+            if (num % i == 0) {
+                arr.push(i);
+            }
+        }
+        return arr;
+    }
+
+    function amicableNums(){
+        //document.write("HERE!")
+        let num1 = document.getElementById("first-Num").value;
+        let num2 = document.getElementById("second-Num").value;
+        let num1fact = findFactors(num1);
+        let num2fact = findFactors(num2);
+        let num1sum = sumArray(num1fact);
+        let num2sum = sumArray(num2fact);
+        if ((num1sum == num2) && (num2sum = num1)){
+            document.getElementById("output-Amicable").innerHTML = "The numbers are amicable."; }
+        else{ document.getElementById("output-Amicable").innerHTML = "The numbers are not amicable."; }
+        document.getElementById("output-Factors").innerHTML = "First number factors: " + num1fact + "<br/>Second number factors: " + num2fact;
+    }
+</script>
+
+<div class = "container mx-50 mt-4" style="text-align: center">
+    
+    <h1>Welcome to the Amicable Number checker!</h1>
+    <input type="number" id="first-Num" placeholder="First number" required="1" /> <br/>
+    <input type="number" id="second-Num" placeholder="Second number" required="1" /><br/>
+    <input type="submit" value="Submit" onclick="amicableNums()">
+    <div id="output-Amicable"> &nbsp;</div>
+    <div id="output-Factors">&nbsp;</div>
+
+</div> <!-- END CONTAINER HERE -->
+
+</body>
+
+</html>

@@ -1,0 +1,68 @@
+[
+    {
+    "name": "The Hills",
+    "artist": ["The Weeknd"],
+    "genre": "Pop",
+    "year": "2017"
+    },
+    {
+    "name": "Shot for me",
+    "artist": ["Drake"],
+    "genre": "Hip-hop",
+    "year": "2011"
+    },
+    {
+    "name": "Take Care",
+    "artist": ["Drake", "Rihanna"],
+    "genre": "Hip-hop",
+    "year": "2011"
+    },
+    {
+    "name": "Make me better",
+    "artist": ["Fabulous"],
+    "genre": "Hip-hop",
+    "year": "2007"
+    },
+    {
+    "name": "Something Different",
+    "artist": ["Adekunle Gold"],
+    "genre": "Afro",
+    "year": "2020"
+    },
+    {
+    "name": "Ye ye ye",
+    "artist": ["Omah Lay"],
+    "genre": "Afro",
+    "year": "2020"
+    },
+    {
+    "name": "Super Trapper",
+    "artist": ["Future"],
+    "genre": "Hip-hop",
+    "year": "2017"
+    },
+    {
+    "name": "All Over",
+    "artist": ["Gyptian"],
+    "genre": "Reggea",
+    "year": "2011"
+    },
+    {
+    "name": "Ben Ova",
+    "artist": ["Mavado"],
+    "genre": "Reggea",
+    "year": "2014"
+    },
+    {
+    "name": "New Rules",
+    "artist": ["Dua Lipa"],
+    "genre": "Pop",
+    "year": "2017"
+    },
+    {
+    "name": "In my head",
+    "artist": ["Jason Derulo"],
+    "genre": "Pop",
+    "year": "2010"
+    }
+]

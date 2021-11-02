@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>JSON Set List</title>
+    	<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+        <script>
+
+            function filter(){
+                let selectGenre = $('select').find(':selected').text();
+                                 
+                filteredSongs = songjson.filter(function(song) {
+                    return song.genre == selectGenre;
+                })
+
+                customPrint(filteredSongs)
+
+            }// end function
+
+            function customPrint(filteredSongs){
+                htmlString = "<ul style='list-style-type:none'>";
+                filteredSongs.forEach(function(song){
+                    htmlString = htmlString + "<li>" + song.name + "</li>";
+                    htmlString = htmlString + "<li>Artist: " + song.artist + "</li>";
+                    htmlString = htmlString + "<li>Genre: " + song.genre + "</li>";
+                    htmlString = htmlString + "<li>Released " + song.year + "</li><br/>";
+
+                })
+                htmlString = htmlString + "</ul"
+                document.getElementById("displayPrint").innerHTML = htmlString;
+            }
+
+            function streamData() {
+                var request = new XMLHttpRequest();
+                request.open("GET", "./json_songslist.json", true);
+                request.onreadystatechange = function() {
+                    if ((request.readyState == 4) && (request.status == 200)) {
+                        data = request.responseText;
+                        songjson = JSON.parse(data);
+                        document.getElementById("unstyledData").innerHTML = data;
+                        customPrint(songsjson);
+                        let genre_array = songjson.map(song => song.genre);
+                        let unique = [...new Set(genre_array)];
+                        s = "<option>Select an option</option>";
+                        unique.forEach(element => s += "<option>" + element + "</option>");
+                        document.getElementById("displayPrint").innerHTML = s;
+                    }
+                };
+                request.send();
+            }
+
+        </script>
+
+    </head>
+
+    <body onload="streamData()" style="text-align: center;">
+        <div id="unstyledData">
+
+        </div>
+
+        <form>
+            <select id="displayPrint" style="margin-top: 50px"></select>
+            <input type="button" value="Filter" onclick="filter()">
+        </form>
+        <div id="prettydata">Loading...</div>
+
+    </body>
+</html>

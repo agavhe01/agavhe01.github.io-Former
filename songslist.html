@@ -27,18 +27,18 @@
 
                 })
                 htmlString = htmlString + "</ul"
-                document.getElementById("displayPrint").innerHTML = htmlString;
+                document.getElementById("filteredprint").innerHTML = htmlString;
             }
 
             function streamData() {
                 var request = new XMLHttpRequest();
-                request.open("GET", "./json_songslist.json", true);
+                request.open("GET", "https://raw.githubusercontent.com/agavhe01/agavhe01.github.io/main/json_songslist.json", true);
                 request.onreadystatechange = function() {
                     if ((request.readyState == 4) && (request.status == 200)) {
                         data = request.responseText;
                         songjson = JSON.parse(data);
                         document.getElementById("unstyledData").innerHTML = data;
-                        customPrint(songsjson);
+                        customPrint(songjson);
                         let genre_array = songjson.map(song => song.genre);
                         let unique = [...new Set(genre_array)];
                         s = "<option>Select an option</option>";
@@ -59,10 +59,10 @@
         </div>
 
         <form>
-            <select id="displayPrint" style="margin-top: 50px"></select>
+            <select id="displayPrint" style="margin-top: 50px margin-bottom: 50px"></select>
             <input type="button" value="Filter" onclick="filter()">
         </form>
-        <div id="prettydata">Loading...</div>
+        <div id="filteredprint">Loading...</div>
 
     </body>
 </html>

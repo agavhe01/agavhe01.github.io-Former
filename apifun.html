@@ -94,10 +94,7 @@
         request.onreadystatechange = function() {
             if ((request.readyState == 4) && (request.status == 200)) {
                 data = request.responseText;
-                //data = 
-                fjson = JSON.parse(data);
                 document.getElementById("data").innerHTML = data;
-                customPrint(fjson)
             }
         };
         request.send();
@@ -110,9 +107,7 @@
 <div class = "container mx-50 mt-4" style="text-align: center">
     <body onload="loadData()" >
         Random Bible Verse Generator <div id="data">Loading...</div>
-
-        
-        
+ 
         <div>
             <ul style='list-style-type:none'>
                 <li>This API serves random bible verses, as well selected quotes of the day </li>

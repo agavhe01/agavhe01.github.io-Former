@@ -1,0 +1,132 @@
+<!--        ANESU GAVHERA              -->
+<!--      CATERING COMPANY             -->
+<!--         8/02/2021                 -->
+<!--        index.html                 -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags always come first -->
+    <meta charset = "utf-8" />
+    <meta name = "viewport" content = "width=device-width, initial-scale=1" />
+
+    <link rel = "stylesheet" href = "css/styles.css" />
+  
+    <title>Gemma Events, an equipment hiring company</title>
+    
+</head>
+
+<!-- NAVBAR OVERLAY SCRIPT -->
+<script>
+
+  /* Open when someone clicks on the  element */
+  function openNav() {
+    document.getElementById("myNav").style.width = "100%";
+  }
+
+  /* Close when someone clicks on the "x" symbol inside the overlay */
+    function closeNav() {
+      document.getElementById("myNav").style.width = "0%";
+    }
+</script>
+
+<body>
+
+<!-- Header jumbtron with logo -->
+  <header class = "jumbotron jumbotron-fluid">
+    <div class = "container">
+      <div class = "row">
+          <div class="col align-self-center">
+              <img src="img/logo white on black.PNG" class="display-centred img-fluid" />
+           </div>
+      </div> <!-- End row line 80-->
+           <div class = "row">
+              <div class = "col mt-3">
+                  <h1 class = "centreAlign">GEMMA'S EVENTS</h1>
+                  <h2 class = "centreAlign d-none d-sm-block">for all your equipment hiring and catering needs</h2>
+                </div>
+              </div>
+    
+  </div>
+
+
+  </header>
+  
+  <!-- Navbar with overlay -->
+  <nav class = "navbar navbar-dark sticky-top">
+    <!-- The overlay -->
+    <div id = "myNav" class = "overlay">
+
+      <!-- Button to close the overlay navigation -->
+      <a href = "javascript:void(0)" class = "closebtn" onclick = "closeNav()">&times;</a>
+
+      <!-- Overlay content -->
+      <div class = "overlay-content">
+        <a href = "index.html">Home</a>
+        <a href = "#">Contact</a>
+        <a href = "services.html">Services</a>
+        <a href = "songList.xml">SongsList XML</a>
+        <a href = "hotdogs.html">Hot Dog</a>
+      </div>
+
+    </div>
+    
+    <div class = "container">
+      <div class = "row" >
+        <div class = "col ml-4">
+          <button class = "navbar-toggler" type = "button" name = "learn" value = "myimage">
+            <img src="img/menuIcon.PNG" height="50px" onclick="openNav()"/>
+         </button>
+
+      </div>
+      </div>
+    </div>
+
+
+  </nav>
+
+  <script>
+      function loadData(){
+        var request = new XMLHttpRequest();
+        request.open("GET", "http://quotes.rest/bible/vod.json", true);
+        request.onreadystatechange = function() {
+            if ((request.readyState == 4) && (request.status == 200)) {
+                data = request.responseText;
+                //data = 
+                fjson = JSON.parse(data);
+                document.getElementById("data").innerHTML = data;
+                customPrint(fjson)
+            }
+        };
+        request.send();
+      }
+
+     
+  </script>
+
+
+<div class = "container mx-50 mt-4" style="text-align: center">
+    <body onload="loadData()" >
+        Random Bible Verse Generator <div id="data">Loading...</div>
+
+        
+        
+        <div>
+            <ul style='list-style-type:none'>
+                <li>This API serves random bible verses, as well selected quotes of the day </li>
+                <li>It includes different requests for getting verse of the day, bible passage of the day, gospel reading, etc</li>
+                <li>request.open("GET", "http://quotes.rest/bible/vod.json", true);</li>
+                <li>Website documentation found at https://theysaidso.com/api/bible/</li>
+                <li>Applications of this API include searching verse by book and chapter, searching verses by key person names</li>
+            </ul>
+        </div>
+    </body>
+
+    </div>
+</div> <!-- END CONTAINER HERE -->
+
+</body>
+
+</html>
